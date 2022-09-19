@@ -1,0 +1,12 @@
+"""Promedio de números aleatorios: Realice un programa que permita calcular el promedio de 1000 números aleatorios generados en el rango de[0,100000]."""
+import random
+contador=0
+acumulador_numeros=0
+promedio=0
+while(contador<=1000):#repite el bucle hasta que el contador llegue a 1000
+    numeros=random.randint(0,100000)#numero random entre 0 y 100000
+    acumulador_numeros=acumulador_numeros+numeros#acumulador de los numeros random
+    contador=contador+1#contador del bucle
+    print(numeros)#imprime los numeros ramdon
+    promedio=(acumulador_numeros/contador)#promedio de los numeros random
+print("el promedio de los numeros es:",promedio)#imprime el promedio

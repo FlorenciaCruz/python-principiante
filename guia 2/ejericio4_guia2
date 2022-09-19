@@ -1,0 +1,6 @@
+"""Decimal a Hexadecimal: Generar n números aleatorios entre el rango de 5000 y 450000,
+ por cada uno de ellos mostrar y generar el numero hexadecimal."""
+import random
+numeros = random.randint(5000,450000)#numero aleatorio entre 5000 y 450000
+print(numeros)#muestro por pantalla el numero aleatorio
+print(hex(numeros))#muestro por pantalla el numero aleatorio en hexadecimal

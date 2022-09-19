@@ -1,0 +1,22 @@
+"""Menores y promedio Realizar un programa que genere 5000 numeros aleatorios en el rango de [0,100000] y que permita:Determinar 
+el menor de los numeros genera dos en forma aleatoria.Calcular el valor promedio de los números menores a 10.000."""
+import random
+i=0
+maximo=0
+minimo=10000000
+acumulador_numeros=0
+acumulador_menor=0
+for i in range(0,5000):
+    numeros=random.randint(0,100000)
+    print(numeros)
+    if(numeros<10.000):
+        acumulador_menor=acumulador_menor+numeros
+    if(maximo<numeros):
+        maximo=numeros
+    if(minimo>numeros):
+        minimo=numeros
+    acumulador_numeros=acumulador_numeros+numeros
+    promedio=acumulador_menor/5000
+print("suma de todos numeros aleatorios:",acumulador_numeros)
+print("menor de los numeros aleatorios:",minimo)
+print("el promedio de menores a 10.000:",promedio)

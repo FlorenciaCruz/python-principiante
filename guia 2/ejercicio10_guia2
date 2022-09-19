@@ -1,0 +1,23 @@
+"""Búsqueda de mayor Realizar un programa que permita buscar el mayor de 10.000 números aleatorios generados en el rango de[0,100.000]."""
+import random
+contador=0
+maximo=0
+minimo=0
+numeros=0
+while(contador<=10000):#cantidad de veces que se repite el bucle
+    numeros=random.randint(0,100000)#numero random entre 0 y 100000
+    if(bool(maximo)==False):
+        maximo=numeros
+    if(bool(minimo)==False):
+        minimo=numeros
+
+    if(maximo<numeros):
+        maximo=numeros
+
+    if(minimo>numeros):
+        minimo=numeros
+    
+    print(numeros)#muestra por pantalla los numeros random
+    contador=contador+1#contador
+print("el maximo es:",maximo)
+print("el minimo es:",minimo)
