@@ -1,0 +1,29 @@
+"""Secuencia de n números. Ingresar una secuencia de n números, de a uno por vez.
+ El valor de n se ingresa por teclado, validar que sea mayor a 0.
+  Determinar:
+   a) Cuántos números ingresados terminan en 5
+   b) La cantidad de veces que aparece el primer número ingresado por el usuario en la secuencia 
+   c) Cuántos números ingresados son mayores al anterior."""
+numero=0
+contador=0
+ultimo_digito=0
+numeros=1
+contador_iguales=0
+maximo=0
+contador_maximo=0
+numero=int(input("ingrese un numero: "))#ingreso numeros por teclado
+while(numeros>0):
+    numeros=int(input("ingrese un numero: "))#ingreso numeros por teclado
+    ultimo_digito=numeros%10#guarda el ultimo digito
+    if(ultimo_digito==5):#si el ultimo digito es igual a cinco
+        contador=contador+1#empiezo a contar los numeros que terminan en cinco
+    if(numeros==numero):#si algun numero ingresado es igual al primer numero
+        contador_iguales=contador_iguales+1#empiezo a contar los numeros iguales
+    if(maximo<=numeros):
+        maximo=numeros
+        contador_maximo=contador_maximo+1#empiezo a contador los numeros mayores al anterior
+#imprimo los resultados de a, b y c
+print("numeros ingresados que terminan en 5:",contador)#imprimo los resultados del contador
+print("La cantidad de veces que aparece el primer número ingresado por el usuario en la secuencia: ",contador_iguales)
+print("numeros ingresados que son mayores al anterior: ",contador_maximo)   
+

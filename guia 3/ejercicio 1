@@ -1,0 +1,68 @@
+"""Comisión de vendedores. Una empresa debe calcular el total de comisiones que debe abonar por ventas realizadas por sus vendedores,
+ para ello les solicita un sistemita que le permita calcular dichos montos.
+Se tiene conocimiento que la empresa tiene cuatro categorías de vendedores(1 a 4).
+Usted debe solicitar el ingreso de la categoría del vendedor y el total de la venta (el proceso termina cuando se ingrese
+una categoría igual a cero) y acumular las comisiones de las ventas rendidas por los vendedores de diferentes
+en base a los siguientes cálculos:
+Categoría1:cobra una comisión de 10%
+Categoría2: cobra una comisión de 25%
+Categoría3:cobra una comisión de 30%
+Categoría4:cobra una comisión de 40%
+Una vez procesadas todas las ventas mostrar
+el total de comisiones a pagar por cada categoría de vendedor es que en el la empresa junto con el total general."""
+categoria=5
+comision1=0
+comision2=0
+comision3=0
+comision4=0
+venta1=0
+venta2=0
+venta3=0
+total1=0
+total2=0
+total3=0
+total4=0
+acumulador_venta1=0
+acumulador_venta2=0
+acumulador_venta3=0
+acumulador_venta4=0
+acumulador_total=0
+print("CATEGORIA DE VENDEDORES:")
+print("opciones de categoria:")
+print("Categoría1:cobra una comisión de 10%")
+print("Categoría2: cobra una comisión de 25%")
+print("Categoría3:cobra una comisión de 30%")
+print("Categoría4:cobra una comisión de 40%")
+while(categoria!=0):
+    categoria=int(input("ingrese la categoria: "))
+    if (categoria==1):
+        print("categoria de vendedor 1")
+        venta1=int(input("ingrese la venta:"))
+        comision1=(venta1*10)/100
+        total1=venta1+comision1
+        acumulador_venta1=acumulador_venta1+total1
+    if (categoria==2):
+        print("categoria de vendedor 1")
+        venta2=int(input("ingrese la venta:"))
+        comision2=(venta2*25)/100
+        total2=venta2+comision2
+        acumulador_venta2=acumulador_venta2+total2 
+    if (categoria==3):
+        print("categoria de vendedor 1")
+        venta3=int(input("ingrese la venta:"))
+        comision3=(venta3*30)/100
+        total3=venta3+comision3
+        acumulador_venta3=acumulador_venta3+total3
+    if (categoria==4):
+        print("categoria de vendedor 1")
+        venta4=int(input("ingrese la venta:"))
+        comision4=(venta4*40)/100
+        total4=venta4+comision4
+        acumulador_venta4=acumulador_venta4+total4
+    acumulador_total=acumulador_venta1+acumulador_venta2+acumulador_venta3+acumulador_venta4
+print("total de la categoria 1:",acumulador_venta1)
+print("total de la categoria 2:",acumulador_venta2)
+print("total de la categoria 3:",acumulador_venta3)
+print("total de la categoria 4:",acumulador_venta4)
+print("total:",acumulador_total)
+

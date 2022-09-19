@@ -1,0 +1,24 @@
+"""Secuencia numérica II. Ingresar un secuencia de números, de a uno por vez, la carga finaliza cuando el usuario ingresa el cero. Determinar:
+a) El promedio de los números que son múltiplos de 6
+b) Cantidad de números que son divisor exacto del anterior
+c) Indicar la cantidad de veces que se generó una secuencia ascendente de 3 o más números impares"""
+numeros=int
+contador_multiplos=0
+promedio=int
+contador_total=0
+anterior=0
+divisor=0
+numeros=int(input("ingrese un numero: "))
+while(numeros!=0):
+    if(numeros%6==0):
+        contador_multiplos=contador_multiplos+1
+    contador_total=contador_total+1
+    promedio=(contador_multiplos*100)/contador_total
+    cantidad=1
+    if (anterior>0)and(numeros%anterior==0):
+        divisor=divisor+1
+    anterior = numeros 
+    numeros = int(input("Ingrese un numero: "))
+print(promedio)
+print("cantidad de numeros divisores al anterior: ",divisor)
+

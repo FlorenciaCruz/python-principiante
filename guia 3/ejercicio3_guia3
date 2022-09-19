@@ -1,0 +1,32 @@
+"""Secuencia numérica. Ingresar una secuencia de números, de a uno por vez, la carga finaliza cuando el usuario ingresa el cero. Determinar
+a) Porcentaje que representan los números divisibles por 3 sobre el total de números ingresados en la secuencia
+#falta punto b
+b) Determinar la cantidad de números que son el cuadrado del número anterior
+c) Determinar la posición del mayor elemento impar de la secuencia"""
+numeros=-1
+contador_numeros=0
+contador_total=0
+porcentaje=0
+numero=0
+cantidad=1
+maximo=0
+contador=0
+#punto a
+while(numeros!=0):#se termina el bucle cuando ingresa numero 0
+    numeros=int(input("ingrese un numero: "))#ingreso los numeros por teclado
+    if(numeros%3==0):#si el resto del numero dividido por 3 es cero entonces es divisible por 3
+        contador_numeros=contador_numeros+1#contador de numeros divisibles por 3
+    contador_total=contador_total+1#contador de todos los numeros ingresados
+    porcentaje=(contador_numeros*contador_total)/100#porcentaje de los numeros impares
+    contador=contador+1#contador del bucle
+#imprimo resultados
+print("contador de numeros divisibles: ",contador_numeros)
+print("contador total:",contador_total)
+print("el porcentaje de los numeros divisbles por 3 sobre el total es de:",porcentaje,"%")
+#punto c
+if(maximo<=numeros):
+        maximo=numeros
+        print(maximo)
+        posicion_mayor=contador_numeros#guardo la posicion en donde se encuentra el maximo
+print("la posicion del mayor elemento impar es: ",posicion_mayor)#imprimo la posicion del maximo
+    
