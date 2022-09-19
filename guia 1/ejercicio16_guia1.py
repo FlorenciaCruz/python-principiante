@@ -19,13 +19,25 @@ _____________________
 _____________________
 salida
 _____________________"""
+#declara las variables
 nombre=""
 apellido=""
 dominio=""
-nombre=(input("ingrese su nombre: "))
-apellido=(input("ingrese su apellido: "))
-dominio=(input("ingrese su dominio: "))
-if nombre[0]==apellido[0]:
-    print(nombre+"."+apellido+"@"+dominio)
+#inicio el programa
+nombre=(input("ingrese su nombre: "))#ingreso nombre por teclado
+apellido=(input("ingrese su apellido: "))#ingreso apellido por teclado
+dominio=(input("ingrese su dominio: "))#ingreso dominio por teclado
+if nombre[0]==apellido[0]:#si la primera letra de nombre es igual a la primera letra de apellido entonces
+    print(nombre+"."+apellido+"@"+dominio)#se separa nombre y apellido con un punto
 else:
-    print(nombre+apellido+"@"+dominio)
+    print(nombre+apellido+"@"+dominio)#se escribe nombre al lado de apellido
+"""********************************************************************************************************
+                                    PRUEBA DE ESCRITORIO
+ **********************************************************************************************************
+  INTENTO   ENTRADA                                 SALIDA         
+ **********************************************************************************************************
+ *   1   *  ingrese su nombre: Felipe            *   FelipeSteffolani@umet.edu.ar
+ *       *    ingrese su apellido: Steffolani    *
+ *       *    ingrese su dominio: umet.edu.ar    *                              
+ * ********************************************************************************************************
+ *"""
