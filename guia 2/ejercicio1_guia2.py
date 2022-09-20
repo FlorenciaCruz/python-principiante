@@ -67,6 +67,28 @@ if(minimo<tiempo_record):
     print("el nuevo record es de",nombre_minimo,"con",minimo,"tiempo")    
     tiempo_promedio=acumulador/numero_competidores;
     print("el promedio entre todos los cicistas es de: ",tiempo_promedio)
+"""********************************************************************************************************
+                                    PRUEBA DE ESCRITORIO
+ **********************************************************************************************************
+  INTENTO       ENTRADA                                 SALIDA  
+ **********************************************************************************************************
+ *     1     *   ingrese el numero de competidores: 2 * el nuevo record es de romina con 2 tiempo
+ *           *   ingrese el nombre: sofia             * el promedio entre todos los cicistas es de:  3.0
+ *           *   tiempo de carrera: 4                 *
+ *           *   ingrese el nombre: romina            *
+ *           *   tiempo de carrera: 2                 *
+ *           *   ingrese el tiempo record: 3          *                                                                  
+ *           *                                        *
+ *           *                                        *     
+ * ********************************************************************************************************
+ *     2     *  ingrese el numero de competidores: 2  *  el ganador de la carrera es: romina
+ *           *    ingrese el nombre: sofia            *  el promedio entre todos los cicistas es de:  5.0
+ *           *    tiempo de carrera: 8                *
+ *           *    ingrese el nombre: romina           *
+ *           *    tiempo de carrera: 2                *               
+ *           *    ingrese el tiempo record: 1         *
+
+ *"""
 
 
 
