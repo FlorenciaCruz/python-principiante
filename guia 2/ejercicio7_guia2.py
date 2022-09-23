@@ -21,6 +21,7 @@ recaudacion_total
 funciones_descuento
 porcentaje_funciones
 ____________________"""
+#declaracion de variables
 entrada_decuento=int
 acumulador_descuento=int
 acumulador_descuento=0
@@ -35,21 +36,49 @@ total_funciones=int
 porcentaje_funciones=int
 cantidad_espectadores=int
 cantidad_espectadores=-1
-while(cantidad_espectadores!=0):
-    cantidad_espectadores=int(input("ingrese la cantidad de spectadores: "))
-    descuento=(input("¿agrega descuento?"))
-    if(descuento=='S') or (descuento=='s'):
+#inicio del programa
+cantidad_espectadores=int(input("ingrese la cantidad de espectadores: "))#ingreso cantidad de espectadores por teclado
+while(cantidad_espectadores!=0):#repite el bucle hasta que ingrese 0 en cantidad de espectadores    
+    descuento=(input("¿agrega descuento?"))#ingreso descuento
+    if(descuento=='S') or (descuento=='s'):#si el descuento es S o s tiene descuento
         print("tiene descuento")
-        entrada_descuento=cantidad_espectadores*50
-        acumulador_descuento=acumulador_descuento+entrada_descuento
-        contador_descuento=contador_descuento+1
-    if(descuento=='N') or (descuento=='n'):
+        entrada_descuento=cantidad_espectadores*50#precio de entrada con descuento
+        acumulador_descuento=acumulador_descuento+entrada_descuento#acumulador de entradas con descuento
+        contador_descuento=contador_descuento+1#contador de entradas con descuento
+    if(descuento=='N') or (descuento=='n'):#si el descuento es N o n no tiene descuento
         print("no tiene descuento")
-        entrada_sin_descuento=cantidad_espectadores*75
-        acumulador_sin_descuento=acumulador_sin_descuento+entrada_sin_descuento
-    contador=contador+1
-total_funciones=acumulador_descuento+acumulador_sin_descuento
-porcentaje_funciones=((contador_descuento*total_funciones)/100)
+        entrada_sin_descuento=cantidad_espectadores*75#precio sin descuento
+        acumulador_sin_descuento=acumulador_sin_descuento+entrada_sin_descuento#acumulador de entradas sin descuento
+    contador=contador+1#contador del bucle
+    cantidad_espectadores=int(input("ingrese la cantidad de espectadores: "))
+total_funciones=acumulador_descuento+acumulador_sin_descuento#total de funciones con descuento y sin descuento
+porcentaje_funciones=((contador_descuento*100)/contador)#calculo porcentaje de las funciones
+#imprimo resultados
 print("la recaudacion total es de:",total_funciones)
 print("funciones con descuento: ",contador_descuento)
 print("promedio del total de funciones:",porcentaje_funciones)
+"""********************************************************************************************************
+                                    PRUEBA DE ESCRITORIO
+ **********************************************************************************************************
+  INTENTO      ENTRADA                                  SALIDA   
+ **********************************************************************************************************
+ *     1     *  ingrese la cantidad de espectadores:1  *  tiene descuento
+ *           *    ¿agrega descuento?s                  *
+ *           *                                         *
+ *           *    ingrese la cantidad de espectadores:1*  no tiene descuento
+ *           *    ¿agrega descuento?n                  *
+ *           *                                         * 
+ *           *    ingrese la cantidad de espectadores:1*  tiene descuento
+ *           *    ¿agrega descuento?s                  *
+ *           *                                         *
+ *           *    ingrese la cantidad de espectadores:1*  no tiene descuento
+ *           *    ¿agrega descuento?n                  *
+ *           *                                         *
+ *           *                                         *      ingrese la cantidad de espectadores: 0
+ *           *                                         *      la recaudacion total es de: 250
+ *           *                                         *      funciones con descuento:  2
+ *                                                     *      promedio del total de funciones: 50.0                                                                                             
+ *           *                                         *     
+ *           *                                         *        
+ * ********************************************************************************************************
+ *"""
