@@ -1,0 +1,71 @@
+"""Menu de Opciones con secuencias. Escribir un programa que le permita al usuario, a través de un menú de opciones, las siguientes operaciones: 
+a) Generar una serie n de números (n ingresado por teclado y validando que sea mayor a cero) y mostrar la suma de los cuadrados 
+b) Ingresar un texto finalizado por un punto y determinar la cantidad de palabras que finalizan con vocales 
+c) Ingresar una serie de números (la carga finaliza con cero) y determinar si hay mayor cantidad de valores pares o de impares 
+d) Salir"""
+print("MENU DE OPCIONES")
+print("a)ingrese numeros y le mostraremos la suma de los cuadrados")
+print("b)ingrese un texto que finalice con un punto y le diremos las palabras que terminan con vocales")
+print("d)salir")
+"""Menu de Opciones con secuencias. Escribir un programa que le permita al usuario, a través de un menú de opciones, las siguientes operaciones: 
+a) Generar una serie n de números (n ingresado por teclado y validando que sea mayor a cero) y mostrar la suma de los cuadrados 
+b) Ingresar un texto finalizado por un punto y determinar la cantidad de palabras que finalizan con vocales 
+c) Ingresar una serie de números (la carga finaliza con cero) y determinar si hay mayor cantidad de valores pares o de impares 
+d) Salir"""
+print("MENU DE OPCIONES")
+print("a)ingrese numeros y le mostraremos la suma de los cuadrados")
+print("b)ingrese un texto que finalice con un punto y le diremos las palabras que terminan con vocales")
+print("c)Ingresar una serie de números (la carga finaliza con cero) y determinar si hay mayor cantidad de valores pares o de impares ")
+print("d)salir")
+import string
+numero_par=0
+numero_impar=0
+numero_mayor=None
+numero=-1
+opcion="a"
+mensaje=None
+while(opcion!="d"):#termina con la opcion d
+    opcion=(input("ingrese la opcion: "))#ingreso la opcion por teclado
+    #opcion a
+    if(opcion=="a"):
+        cantidad=1
+        while(cantidad>0):#se repite mientras cantidad sea mayor a cero
+            cantidad = int(input("¿cuantos numeros desea ingresar?"))#ingreso la cantidad de numeros
+            if cantidad<0:#validacion de que sea mayor a cero
+                    print("ingrese numeros positivos")#mensaje de error
+            else:
+                    anterior = int(input("ingrese un numero:"))#ingreso el numero anterior
+                    for i in range(cantidad - 1):#el bucle se repite una vez menos que cantidad
+                        numero= int(input("ingrese otro numero:"))#nuevo numero que comparo con el anterior
+                        if (numero/2==anterior):#si el resto de la division entre el numero nuevo y el anterior es cierta
+                                #significa que numero es el doble de anterior
+                            print("el cuadrado de:",anterior,"es",numero)#imprimo resultados
+#opcion b
+    if(opcion=="b"):
+        letra=string
+        texto=(input("ingrese un texto: "))#ingreso texto por teclado
+        letra=texto[len(texto)-1]#te dice la ultima letra del texto
+        if letra == 'a' or letra == 'e' or letra == 'i' or letra == 'o' or letra == 'u':#condicional de vocales  
+            print("la palabra finaliza con la vocal:",letra)#imprimo resultados
+#opcion c
+    if(opcion=="c"):
+        while(numero!=0):#termina con numero=0
+            numero=int(input("ingrese un numero: "))#ingreso numero por teclado
+            if(numero%2==0):#si el resto es igual a cero es numero par
+                numero_par=numero_par+1#contador de numero par
+            if(numero%2!=0):#si el resto es distinto a cero es impar
+                numero_impar=numero_impar+1#contador de numero impar
+            #maximo y minimo de numeros pares e impares
+            if(numero_par>numero_impar):#si el numero par es mayor del impar
+                numero_mayor=numero_par#el numero par es el mayor
+                mensaje=("hay mayor cantidad de numeros pares",numero_mayor)#imprimo numero mayor
+            if(numero_impar>numero_par):#si el numero impar es mayor del par
+                numero_mayor=numero_impar#el numero impar es mayor
+                mensaje=("hay mayor cantidad de numeros impares",numero_mayor)#imprimo numero mayor
+        #imprimo resultados
+        print("cantidad de numeros pares",numero_par)
+        print("cantidad de numeros impares",numero_impar)
+        print(mensaje)
+#opcion c
+    if(opcion=="d"):
+        print("saliendo del programa")#imprimo mensaje saliendo del programa
