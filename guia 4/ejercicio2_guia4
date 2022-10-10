@@ -1,0 +1,32 @@
+"""Crea una lista e inicializala con 5 cadenas de caracteres leídas por teclado. Copia los elementos de la lista en otra lista pero en orden inverso, y muestra sus elementos por la pantalla."""
+#declaro las variables
+i=0
+#creo la lista
+caracteres = []
+#repito el bucle hasta 5
+for i in range(5):
+    #ingreso de caracter por teclado
+    ingreso=input("ingrese un caracter:")
+    #uso append para aderir un elemento a la lista
+    caracteres.append(ingreso)
+#imprimo la lista por pantalla
+print(caracteres)
+#uso reversed para poner al reves la lista de caracteres
+caracteres_reves = list(reversed(caracteres))
+#imprimo la lista de caracteres al reves
+print(caracteres_reves)
+"""********************************************************************************************************
+                                    PRUEBA DE ESCRITORIO
+ **********************************************************************************************************
+  INTENTO       ENTRADA                     SALIDA      
+ **********************************************************************************************************
+ *     1    *   ingrese un caracter:esta   * ['esta', 'es', 'una', 'lista', 'creada']                                           
+ *          *   ingrese un caracter:es     * ['creada', 'lista', 'una', 'es', 'esta']
+ *          *   ingrese un caracter:una    * 
+ *          *   ingrese un caracter:lista  *
+ *          *   ingrese un caracter:creada *                                                                                         
+ *          *                              *      
+ *          *                              *       
+ * ********************************************************************************************************
+ *"""
+

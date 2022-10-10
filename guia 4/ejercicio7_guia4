@@ -1,0 +1,33 @@
+"""Programa que declare tres listas ‘lista1’, ‘lista2’ y ‘lista3’ de cinco enteros cada uno, pida valores para ‘lista1’ y ‘lista2’ y calcule lista3=lista1+lista2."""
+#importo la funcion zip_longest
+from itertools import zip_longest
+#declaro las variables
+i=0
+ingreso=1
+contador1=1
+contador2=1
+#creo la lista
+lista1 = []
+lista2 = []
+lista3 = []
+print("ingreso numeros de la lista1")
+#ingreso numeros hasta que sea menor a 0
+while(contador1<=5):
+    #ingreso de numero por teclado
+    ingreso=int(input("ingrese un numero:"))
+    #uso append para aderir un elemento a la lista
+    lista1.append(ingreso)
+    contador1=contador1+1  
+#imprimo la lista por pantalla
+print(lista1)
+print("ingreso numeros de la lista2")
+while(contador2<=5):
+    #ingreso de numero por teclado
+    ingreso=int(input("ingrese un numero:"))
+    #uso append para aderir un elemento a la lista
+    lista2.append(ingreso)
+    contador2=contador2+1
+print(lista2)
+#elementos a sumar x, y 
+lista3=[x+y for x,y in zip_longest(lista1,lista2)]
+print(lista3)

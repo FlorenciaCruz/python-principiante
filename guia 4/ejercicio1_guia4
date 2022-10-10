@@ -1,0 +1,22 @@
+"""Realizar un programa que inicialice una lista con 10 valores aleatorios (del 1 al 10) y posteriormente muestre en pantalla cada elemento de la lista junto con su cuadrado y su cubo."""
+import random
+#declaro variables
+i=0
+#lista de numeros
+numeros= [0]*10
+#repito el bucle hasta 10
+for i in range(10):
+    #numeros aleatorios de 1 a 10
+    numeros[i] = random.randint(1,10)
+#imprimo la lista de numeros aleatorios del 1 al 10
+print(numeros)
+"""********************************************************************************************************
+                                    PRUEBA DE ESCRITORIO
+ **********************************************************************************************************
+  INTENTO   *   SALIDA     
+ **********************************************************************************************************
+     1      *   [5, 4, 2, 10, 1, 6, 5, 8, 3, 10]                                
+ * ********************************************************************************************************
+     2      *   [9, 7, 4, 2, 10, 8, 3, 3, 7, 7]                    
+ * ********************************************************************************************************
+ *"""

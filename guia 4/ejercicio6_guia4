@@ -1,0 +1,14 @@
+"""Crea un programa que pida un número al usuario un número de mes (por ejemplo, el 4) y diga cuántos días tiene (por ejemplo, 30) y el nombre del mes. Debes usar listas. Para simplificarlo vamos a suponer que febrero tiene 28 días."""
+#creo la lista mes
+mes=("enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre")
+#creo la lista dias
+dia=("31","28","31","30","31","30","31","31","30","31","30","31")
+#el bucle se repite hasta que ingrese 0
+while(mes!=0):
+    #ingreso el mes por teclado
+    ingreso_mes=int(input("ingrese el numero del mes: "))
+    #imprimo por pantalla el ingreso del mes -1 por que la lista empieza con posicion 0
+    #imprimo por pantalla la misma posicion del mes pero en la lista de dia
+    print("el mes de "+mes[ingreso_mes-1]+" tiene "+dia[ingreso_mes-1]+" dias")
+    
+

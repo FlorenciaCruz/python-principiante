@@ -1,0 +1,28 @@
+"""Se quiere realizar un programa que lea por teclado las 5 notas obtenidas por un alumno (comprendidas entre 0 y 10).
+ A continuación debe mostrar todas las notas, la nota media, la nota más alta que ha sacado y la menor."""
+notas = []
+i=0
+maximo=None
+minimo=None
+total_notas=0
+promedio_notas=0
+for i in range(5):
+    ingreso=int(input("ingrese una nota:"))
+    if(bool(maximo)==False):
+        maximo=ingreso
+    if(bool(minimo)==False):
+        minimo=ingreso
+    notas.append(ingreso)
+    if(maximo<=ingreso):
+        maximo=ingreso
+    if(minimo>ingreso):
+        minimo=ingreso
+    total_notas=total_notas+ingreso
+    promedio_notas=total_notas/5
+print(notas)
+print("la nota media:",promedio_notas)
+print("la nota mas baja",minimo)
+print("la nota mas alta:",maximo)
+
+
+

@@ -1,0 +1,16 @@
+"""Hacer un programa que inicialice una lista de números con valores aleatorios (10 valores), y posterior ordene los elementos de menor a mayor."""
+import random
+#declaro variables
+i=0
+#lista de numeros
+numeros= [0]*10
+#repito el bucle hasta 10
+for i in range(10):
+    #numeros aleatorios de 1 a 10
+    numeros[i] = random.randint(1,10)
+#imprimo la lista de numeros aleatorios del 1 al 10
+print(numeros)
+#uso sort para ordenar los numeros de menor a mayor
+numeros.sort()
+#imprimo los numeros ordenados por pantalla
+print(numeros)

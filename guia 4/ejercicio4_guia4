@@ -1,0 +1,30 @@
+"""Programa que declare una lista y la vaya llenando de números hasta que introduzcamos un número negativo. Entonces se debe imprimir el vector (sólo los elementos introducidos)."""
+#declaro las variables
+i=0
+ingreso=1
+#creo la lista
+numeros = []
+#ingreso numeros hasta que sea menor a 0
+while(ingreso>0):
+    #ingreso de numero por teclado
+    ingreso=int(input("ingrese un numero:"))
+    #uso append para aderir un elemento a la lista
+    numeros.append(ingreso)
+#imprimo la lista por pantalla
+print(numeros)
+"""********************************************************************************************************
+                                    PRUEBA DE ESCRITORIO
+ **********************************************************************************************************
+  INTENTO      ENTRADA                  SALIDA   
+ **********************************************************************************************************
+ *     1     *ingrese un numero:9   *       [9, 8, 2, -3]
+ *           *ingrese un numero:8   * 
+ *           *ingrese un numero:2   *
+ *           *ingrese un numero:-3  *                                       
+ * ********************************************************************************************************
+ *     2     *ingrese un numero:3   *       [3, 8, 9, -5]
+             *ingrese un numero:8   *
+             *ingrese un numero:9   *
+             *ingrese un numero:-5  *                            
+ * ********************************************************************************************************
+ *"""
