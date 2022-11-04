@@ -1,0 +1,26 @@
+"""Diseñar el algoritmo correspondiente a un programa, que:
+a) Crea una tabla (lista con dos dimensiones) de 5x5 enteros.
+b) Carga la tabla con valores numéricos enteros.
+c) Suma todos los elementos de cada fila y todos los elementos de cada columna visualizando los resultados en pantalla."""
+def main():
+    # definimos un array de 5x5 bidimensional
+    a = [[0 for x in range(5)] for x in range(5)]
+    suma = 0
+    for i in range(5):
+        for j in range(5):
+            a[i][j]=int(input("Introduce un numero: "))
+
+    for i in range(5):
+        print(a[i])
+
+
+    for row in a:
+        for column in row:
+            suma += column
+
+
+    print("La suma de todos los elementos es: ", suma)
+
+main()
+
+
