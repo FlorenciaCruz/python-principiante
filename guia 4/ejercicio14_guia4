@@ -1,0 +1,80 @@
+"""Crear un programa que lea los precios de 5 artículos y las cantidades vendidas por una empresa en sus 4 sucursales. Informar:
+- Las cantidades totales de cada artículo.
+- La cantidad de artículos en la sucursal 2.
+- La cantidad del artículo 3 en la sucursal 1.
+- La recaudación total de cada sucursal.
+- La recaudación total de la empresa.
+- La sucursal de mayor recaudación."""
+lista_articulos1=[]
+lista_articulos2=[]
+lista_articulos3=[]
+lista_articulos4=[]
+contador_articulo_3=0
+acumulador_articulos=0
+recaudacion_total=0
+articulos1=1
+cantidad=0
+recaudacion=0
+total1=0
+total2=0
+total3=0
+maximo=0
+sucursal=1
+print("todos los articulos valen $80")
+while(sucursal!=0):
+    sucursal=int(input("ingrese la sucursal: "))
+    if(sucursal==1):
+        while(articulos1!=0):
+            articulos1=int(input("ingrese un articulo"))
+            lista_articulos1.append(articulos1)
+            acumulador_articulos=acumulador_articulos+articulos1
+            recaudacion_total=acumulador_articulos
+            if(articulos1==3):
+                contador_articulo_3=contador_articulo_3+1
+        total1=recaudacion_total*80
+        print("articulos sucursal 1:")
+        print(lista_articulos1)
+        print("cantidad articulo 3:"+str(contador_articulo_3))
+        print("recaudacion total: "+str(total1))
+        total=total1
+    if(sucursal==2):
+        articulos2=-1
+        while(articulos2!=0):
+            articulos2=int(input("ingrese un articulo"))
+            lista_articulos2.append(articulos2)
+            cantidad=cantidad+1
+            total2=((cantidad-1)*80)
+        print("articulos sucursal 2:")
+        print(lista_articulos2)
+        print("recaudacion total: "+str(total2))    
+        total=total2
+    if(sucursal==3):
+        articulos3=-1
+        while(articulos3!=0):
+            articulos3=int(input("ingrese un articulo"))
+            lista_articulos3.append(articulos3)
+            cantidad=cantidad+1
+            total3=((cantidad-1)*80)
+        print("articulos sucursal 3:")
+        print(lista_articulos3)
+        print("recaudacion total: "+str(total3))
+    if(sucursal==4):
+        articulos4=-1
+        while(articulos4!=0):
+            articulos4=int(input("ingrese un articulo"))
+            lista_articulos4.append(articulos4)
+            cantidad=cantidad+1
+            total4=((cantidad-1)*80)
+        print("articulos sucursal 4:")
+        print(lista_articulos4)
+        print("recaudacion total: "+str(total4))  
+        total=total4
+    if(maximo<=total):
+        maximo=total
+sucursal=int(input("ingrese la sucursal: "))
+recaudacion=total1+total2+total3
+print("RECAUDACION TOTAL DE LA EMPRESA: "+str(recaudacion))
+print("RECUDACION SUCURSAL 1: "+str(total1))
+print("RECAUDACION SUCURSAL 2: "+str(total2))
+print("RECAUDACION SUCURSAL 3: "+str(total3))
+print("maximo:"+str(maximo))
