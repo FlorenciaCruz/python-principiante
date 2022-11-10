@@ -1,0 +1,13 @@
+"""Crear un programa que añada números a una lista hasta que introducimos un número negativo.
+ A continuación debe crear una nueva lista igual que la anterior pero eliminando los números duplicados.
+  Muestra esta segunda lista para comprobar que hemos eliminados los duplicados."""
+lista1=[]
+lista2=[]
+ingreso_numeros=1
+while(ingreso_numeros>0):
+    ingreso_numeros=int(input("ingrese un numero a la lista: "))
+    lista1.append(ingreso_numeros)
+    conjunto=set(lista1)
+    lista2=conjunto
+print(lista1)
+print(lista2)
